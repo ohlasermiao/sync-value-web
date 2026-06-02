@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>シンクバリュー株式会社 | Syncvalue Inc.</title>
-  <meta name="description" content="シンクバリュー株式会社（Syncvalue Inc.）の公式サイト。不動産賃貸・管理業を基盤に、インターネットを利用した会員制コンテンツサービスへ事業を展開しています。">
+  <meta name="description" content="シンクバリュー株式会社（Syncvalue Inc.）の公式サイト。不動産賃貸・管理業を基盤に、インターネットを利用した会員制サービスへ事業を展開しています。">
   <meta property="og:title" content="シンクバリュー株式会社 | Syncvalue Inc.">
   <meta property="og:description" content="不動産賃貸・管理業を基盤に、インターネットサービスへ事業を展開する企業。">
   <meta property="og:type" content="website">
@@ -40,7 +40,7 @@
       backdrop-filter: blur(6px); z-index: 10;
     }
     .header-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
-    .brand { display: flex; flex-direction: column; line-height: 1.2; }
+    .brand { display: flex; flex-direction: column; line-height: 1.2; text-decoration: none; }
     .brand .jp { font-size: 18px; font-weight: 700; color: var(--navy); letter-spacing: 0.04em; }
     .brand .en { font-size: 11px; color: var(--muted); letter-spacing: 0.18em; text-transform: uppercase; }
     nav a { margin-left: 22px; text-decoration: none; color: var(--ink); font-size: 14px; }
@@ -74,7 +74,6 @@
     /* Business */
     .biz { display: grid; gap: 24px; }
     .biz-item { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 28px; }
-    section:nth-of-type(even) .biz-item { background: #fff; }
     .biz-item h3 { font-size: 17px; color: var(--navy); margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
     .biz-item h3 .tag { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: #eef1f5; color: var(--navy-soft); letter-spacing: 0.05em; }
     .biz-item p { color: #3f4654; font-size: 15px; }
@@ -92,16 +91,16 @@
     footer .fb { color: #fff; font-weight: 700; letter-spacing: 0.04em; }
   </style>
 </head>
-<body>
+<body id="top">
   <header>
     <div class="container header-inner">
-      <div class="brand">
+      <a class="brand" href="#top" aria-label="ページ上部へ">
         <span class="jp">シンクバリュー株式会社</span>
         <span class="en">Syncvalue Inc.</span>
-      </div>
+      </a>
       <nav>
-        <a href="#about">会社概要</a>
         <a href="#business">事業内容</a>
+        <a href="#about">会社概要</a>
         <a href="#contact">お問い合わせ</a>
       </nav>
     </div>
@@ -111,25 +110,9 @@
     <div class="container">
       <div class="en-sub">Syncvalue Inc.</div>
       <h1>不動産賃貸管理を基盤に、<br>インターネットサービスへ。</h1>
-      <p>シンクバリュー株式会社は、不動産の賃貸・管理を主たる事業として安定した経営基盤を築きながら、インターネットを利用した会員制コンテンツサービスへと事業領域を広げています。</p>
+      <p>シンクバリュー株式会社は、不動産の賃貸・管理を主たる事業として安定した経営基盤を築きながら、インターネットを利用した会員制サービスへと事業領域を広げています。</p>
     </div>
   </div>
-
-  <section id="about">
-    <div class="container">
-      <div class="sec-label">Company Profile</div>
-      <h2>会社概要</h2>
-      <table class="profile">
-        <tr><th>商号</th><td>シンクバリュー株式会社（Syncvalue Inc.）</td></tr>
-        <tr><th>設立</th><td>2023年（令和5年）9月1日</td></tr>
-        <tr><th>資本金</th><td>100万円</td></tr>
-        <tr><th>代表者</th><td>代表取締役　繆 逸峰</td></tr>
-        <tr><th>所在地</th><td>〒331-0078　埼玉県さいたま市西区西大宮二丁目26番地6</td></tr>
-        <tr><th>事業内容</th><td>不動産の賃貸・管理業／オンライン会員制コンテンツサービスの企画・運営／各種コンサルティング業務　他</td></tr>
-        <tr><th>公告方法</th><td>官報に掲載して行う</td></tr>
-      </table>
-    </div>
-  </section>
 
   <section id="business">
     <div class="container">
@@ -141,8 +124,8 @@
           <p>当社は、保有する不動産の賃貸および管理を主たる事業として、安定的な賃料収入を基盤に経営を行っています。</p>
         </div>
         <div class="biz-item">
-          <h3>オンライン会員制コンテンツサービス <span class="tag dev">順次展開</span></h3>
-          <p>インターネットを利用した会員制のオンラインコンテンツ・コミュニティサービスの企画および運営を準備しております。利用料は当社が直接受領し、当社のサービス対価として提供するものです。</p>
+          <h3>オンライン会員制サービス <span class="tag dev">順次展開</span></h3>
+          <p>インターネットを利用した会員制のオンラインコンテンツ・コミュニティサービスの企画および運営を準備しております。</p>
         </div>
         <div class="biz-item">
           <h3>その他の事業</h3>
@@ -152,13 +135,31 @@
     </div>
   </section>
 
+  <section id="about">
+    <div class="container">
+      <div class="sec-label">Company Profile</div>
+      <h2>会社概要</h2>
+      <table class="profile">
+        <tr><th>商号</th><td>シンクバリュー株式会社（Syncvalue Inc.）</td></tr>
+        <tr><th>設立</th><td>2023年（令和5年）9月1日</td></tr>
+        <tr><th>資本金</th><td>100万円</td></tr>
+        <tr><th>代表者</th><td>代表取締役　繆 逸峰</td></tr>
+        <tr><th>所在地</th><td>〒331-0078　埼玉県さいたま市西区西大宮二丁目26番地6</td></tr>
+        <tr><th>事業内容</th><td>不動産の賃貸・管理業<br>オンライン会員制サービスの企画・運営<br>各種コンサルティング業務　ほか</td></tr>
+        <tr><th>公告方法</th><td>官報に掲載して行う</td></tr>
+      </table>
+    </div>
+  </section>
+
   <section id="contact">
     <div class="container">
       <div class="sec-label">Contact</div>
       <h2>お問い合わせ</h2>
       <div class="contact-grid">
-        <div class="contact-row"><span class="k">メール</span><span class="v"><a href="mailto:info@sync-value.com">info@sync-value.com</a></span></div>
-        <div class="contact-row"><span class="k">所在地</span><span class="v">〒331-0078　埼玉県さいたま市西区西大宮二丁目26番地6</span></div>
+        <div class="contact-row">
+          <span class="k">メール</span>
+          <span class="v"><a id="mail" href="#">［メールアドレスを表示］</a></span>
+        </div>
       </div>
     </div>
   </section>
@@ -169,5 +170,15 @@
       <span>&copy; 2023 Syncvalue Inc. All rights reserved.</span>
     </div>
   </footer>
+
+  <script>
+    /* メールアドレスはスクレイピング対策のため JS で組み立てる */
+    (function () {
+      var user = "info", domain = "sync-value.com";
+      var addr = user + "@" + domain;
+      var el = document.getElementById("mail");
+      if (el) { el.href = "mailto:" + addr; el.textContent = addr; }
+    })();
+  </script>
 </body>
 </html>
