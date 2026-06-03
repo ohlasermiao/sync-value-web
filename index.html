@@ -4,91 +4,94 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>シンクバリュー株式会社 | Syncvalue Inc.</title>
-  <meta name="description" content="シンクバリュー株式会社（Syncvalue Inc.）の公式サイト。不動産賃貸・管理業を基盤に、インターネットを利用した会員制サービスへ事業を展開しています。">
+  <meta name="description" content="シンクバリュー株式会社（Syncvalue Inc.）— 会員制コミュニティ・サブスクリプション事業の運営と構築支援、および不動産の賃貸・管理。「継続する価値」を事業として形にします。">
   <meta property="og:title" content="シンクバリュー株式会社 | Syncvalue Inc.">
-  <meta property="og:description" content="不動産賃貸・管理業を基盤に、インターネットサービスへ事業を展開する企業。">
+  <meta property="og:description" content="会員制コミュニティ・サブスクリプション事業の運営と構築支援、および不動産の賃貸・管理。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sync-value.com/">
   <style>
     :root {
-      --navy: #1c2c43;
-      --navy-soft: #2d4060;
-      --accent: #b08d57;
-      --ink: #2a2a2a;
-      --muted: #6b7280;
-      --line: #e3e6ea;
-      --bg: #ffffff;
-      --bg-soft: #f6f7f9;
+      --navy: #1c2c43; --navy-soft: #2d4060; --accent: #b08d57;
+      --ink: #2a2a2a; --muted: #6b7280; --line: #e3e6ea;
+      --bg: #ffffff; --bg-soft: #f6f7f9;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic Medium", "Yu Gothic", "Meiryo", system-ui, sans-serif;
-      color: var(--ink);
-      background: var(--bg);
-      line-height: 1.9;
-      font-size: 16px;
+      color: var(--ink); background: var(--bg); line-height: 1.9; font-size: 16px;
       -webkit-font-smoothing: antialiased;
     }
     a { color: var(--navy-soft); }
-    .container { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+    .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
 
-    /* Header */
     header {
-      border-bottom: 1px solid var(--line);
-      position: sticky; top: 0; background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(6px); z-index: 10;
+      border-bottom: 1px solid var(--line); position: sticky; top: 0;
+      background: rgba(255,255,255,0.95); backdrop-filter: blur(6px); z-index: 10;
     }
     .header-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
     .brand { display: flex; flex-direction: column; line-height: 1.2; text-decoration: none; }
     .brand .jp { font-size: 18px; font-weight: 700; color: var(--navy); letter-spacing: 0.04em; }
     .brand .en { font-size: 11px; color: var(--muted); letter-spacing: 0.18em; text-transform: uppercase; }
-    nav a { margin-left: 22px; text-decoration: none; color: var(--ink); font-size: 14px; }
+    nav a { margin-left: 20px; text-decoration: none; color: var(--ink); font-size: 14px; }
     nav a:hover { color: var(--accent); }
-    @media (max-width: 640px) { nav { display: none; } }
+    @media (max-width: 680px) { nav { display: none; } }
 
-    /* Hero */
     .hero {
       background: linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 100%);
-      color: #fff; padding: 92px 0;
+      color: #fff; padding: 104px 0;
     }
-    .hero h1 { font-size: 30px; font-weight: 700; letter-spacing: 0.04em; margin-bottom: 18px; }
-    .hero p { font-size: 16px; color: #d4dae4; max-width: 640px; }
-    .hero .en-sub { font-size: 12px; letter-spacing: 0.2em; color: var(--accent); text-transform: uppercase; margin-bottom: 22px; }
+    .hero .en-sub { font-size: 12px; letter-spacing: 0.22em; color: var(--accent); text-transform: uppercase; margin-bottom: 24px; }
+    .hero h1 { font-size: 38px; font-weight: 700; letter-spacing: 0.04em; margin-bottom: 22px; line-height: 1.5; }
+    .hero p { font-size: 16px; color: #d4dae4; max-width: 620px; margin-bottom: 32px; }
+    .cta {
+      display: inline-block; background: var(--accent); color: #fff; text-decoration: none;
+      padding: 13px 32px; border-radius: 6px; font-size: 15px; font-weight: 600; letter-spacing: 0.05em;
+      transition: opacity 0.2s;
+    }
+    .cta:hover { opacity: 0.88; }
 
-    /* Section */
-    section { padding: 72px 0; }
+    section { padding: 80px 0; }
     section:nth-of-type(even) { background: var(--bg-soft); }
     .sec-label { font-size: 12px; letter-spacing: 0.2em; color: var(--accent); text-transform: uppercase; margin-bottom: 8px; }
-    h2 { font-size: 23px; font-weight: 700; color: var(--navy); margin-bottom: 32px; letter-spacing: 0.04em; }
+    h2 { font-size: 24px; font-weight: 700; color: var(--navy); margin-bottom: 14px; letter-spacing: 0.04em; }
+    .lead { color: var(--muted); margin-bottom: 40px; max-width: 640px; }
 
-    /* Company table */
-    table.profile { width: 100%; border-collapse: collapse; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
+    .card { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 30px 26px; }
+    .card .ic { font-size: 24px; margin-bottom: 14px; display: block; }
+    .card h3 { font-size: 17px; color: var(--navy); margin-bottom: 10px; }
+    .card p { color: #3f4654; font-size: 14.5px; }
+
+    table.profile { width: 100%; border-collapse: collapse; max-width: 720px; }
     table.profile th, table.profile td { text-align: left; padding: 16px 8px; border-bottom: 1px solid var(--line); vertical-align: top; font-size: 15px; }
     table.profile th { width: 28%; color: var(--navy); font-weight: 700; white-space: nowrap; }
     @media (max-width: 560px) {
-      table.profile th, table.profile td { display: block; width: 100%; padding: 10px 0; border-bottom: none; }
-      table.profile td { padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+      table.profile th, table.profile td { display: block; width: 100%; padding: 8px 0; border-bottom: none; }
+      table.profile td { padding-bottom: 18px; border-bottom: 1px solid var(--line); }
     }
 
-    /* Business */
-    .biz { display: grid; gap: 24px; }
-    .biz-item { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 28px; }
-    .biz-item h3 { font-size: 17px; color: var(--navy); margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
-    .biz-item h3 .tag { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: #eef1f5; color: var(--navy-soft); letter-spacing: 0.05em; }
-    .biz-item p { color: #3f4654; font-size: 15px; }
-    .tag.dev { background: #fbf3e6; color: var(--accent); }
+    form.contact { max-width: 580px; display: grid; gap: 18px; }
+    form.contact label { font-size: 14px; font-weight: 600; color: var(--navy); display: block; margin-bottom: 6px; }
+    form.contact input, form.contact textarea {
+      width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: 6px;
+      font-family: inherit; font-size: 15px; color: var(--ink);
+    }
+    form.contact input:focus, form.contact textarea:focus { outline: none; border-color: var(--accent); }
+    form.contact textarea { min-height: 130px; resize: vertical; }
+    form.contact button {
+      background: var(--navy); color: #fff; border: none; padding: 14px 36px; border-radius: 6px;
+      font-size: 15px; font-weight: 600; letter-spacing: 0.05em; cursor: pointer; justify-self: start;
+    }
+    form.contact button:hover { background: var(--navy-soft); }
+    .form-note { font-size: 13px; color: var(--muted); }
 
-    /* Contact */
-    .contact-grid { display: grid; grid-template-columns: 1fr; gap: 18px; max-width: 560px; }
-    .contact-row { display: flex; gap: 14px; align-items: baseline; }
-    .contact-row .k { font-size: 13px; color: var(--muted); width: 92px; flex-shrink: 0; }
-    .contact-row .v { font-size: 16px; }
-
-    /* Footer */
-    footer { background: var(--navy); color: #aeb8c8; padding: 36px 0; font-size: 13px; }
-    .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    footer { background: var(--navy); color: #aeb8c8; padding: 40px 0; font-size: 13px; }
+    .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; align-items: center; }
     footer .fb { color: #fff; font-weight: 700; letter-spacing: 0.04em; }
+    footer a { color: #aeb8c8; text-decoration: none; }
+    footer a:hover { color: #fff; }
   </style>
 </head>
 <body id="top">
@@ -99,7 +102,8 @@
         <span class="en">Syncvalue Inc.</span>
       </a>
       <nav>
-        <a href="#business">事業内容</a>
+        <a href="#services">サービス</a>
+        <a href="#strengths">選ばれる理由</a>
         <a href="#about">会社概要</a>
         <a href="#contact">お問い合わせ</a>
       </nav>
@@ -109,27 +113,57 @@
   <div class="hero">
     <div class="container">
       <div class="en-sub">Syncvalue Inc.</div>
-      <h1>不動産賃貸管理を基盤に、<br>インターネットサービスへ。</h1>
-      <p>シンクバリュー株式会社は、不動産の賃貸・管理を主たる事業として安定した経営基盤を築きながら、インターネットを利用した会員制コミュニティ事業とその運営支援へと事業領域を広げています。</p>
+      <h1>価値を、継続させる。</h1>
+      <p>シンクバリュー株式会社は、会員制コミュニティ・サブスクリプションサービスの運営と構築支援、そして不動産の賃貸・管理を通じて、「継続する価値」を事業として形にします。</p>
+      <a class="cta" href="#contact">お問い合わせ →</a>
     </div>
   </div>
 
-  <section id="business">
+  <section id="services">
     <div class="container">
-      <div class="sec-label">Business</div>
-      <h2>事業内容</h2>
-      <div class="biz">
-        <div class="biz-item">
-          <h3>不動産賃貸・管理業 <span class="tag">主力事業</span></h3>
-          <p>当社は、保有する不動産の賃貸および管理を主たる事業として、安定的な賃料収入を基盤に経営を行っています。</p>
+      <div class="sec-label">Services</div>
+      <h2>サービス</h2>
+      <p class="lead">オンライン事業の「続く仕組み」づくりから、実物資産の運用まで。当社が提供する価値をご紹介します。</p>
+      <div class="grid">
+        <div class="card">
+          <span class="ic">🧩</span>
+          <h3>コミュニティ運営・構築支援</h3>
+          <p>会員制コミュニティの立ち上げから運営までを一気通貫で支援。会員認証、決済・継続課金の連携、会員ランク管理、Bot による自動運営、日次の自動チェックまで、「続く仕組み」をまるごと提供します。</p>
         </div>
-        <div class="biz-item">
-          <h3>オンラインコミュニティ・サブスクリプション事業 <span class="tag dev">事業展開中</span></h3>
-          <p>当社は、会員制オンラインコミュニティおよびサブスクリプション型サービスの企画・運営を行います。あわせて、クリエイターや事業者の皆様に向けて、会員制コミュニティの構築・運営を支援する技術サービス（会員認証、決済・継続課金の連携、会員管理、運営の自動化など）を提供します。</p>
+        <div class="card">
+          <span class="ic">🔄</span>
+          <h3>サブスクリプション運営</h3>
+          <p>有料会員サービスの企画・運営。継続課金、会員管理、複数の配信・決済プラットフォーム連携に対応し、クリエイターや事業者が「コンテンツに集中できる」環境を整えます。</p>
         </div>
-        <div class="biz-item">
-          <h3>その他の事業</h3>
-          <p>各種コンサルティング業務、総合輸出入貿易業務、各種商品の企画・製造・販売など、登記上の事業目的に基づく事業を行っています。</p>
+        <div class="card">
+          <span class="ic">🏠</span>
+          <h3>不動産賃貸・管理</h3>
+          <p>保有物件の賃貸・管理および物件のご紹介。実物資産の安定した賃料収入が、当社の経営基盤を支えています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="strengths">
+    <div class="container">
+      <div class="sec-label">Why Syncvalue</div>
+      <h2>選ばれる理由</h2>
+      <p class="lead">場当たり的な運用ではなく、仕組みから設計する。それが当社の一貫した姿勢です。</p>
+      <div class="grid">
+        <div class="card">
+          <span class="ic">⚙️</span>
+          <h3>エンジニアリング起点の設計</h3>
+          <p>認証・決済・会員管理・運営を、その場しのぎではなく一つのシステムとして設計。再現性と拡張性のある仕組みを組み上げます。</p>
+        </div>
+        <div class="card">
+          <span class="ic">🔗</span>
+          <h3>一気通貫の運営基盤</h3>
+          <p>コンテンツ配信・コミュニティ・決済・会員管理を分断せず、つながった一つの体験として提供。運営者の手間を最小化します。</p>
+        </div>
+        <div class="card">
+          <span class="ic">🌏</span>
+          <h3>グローバル対応</h3>
+          <p>海外在住の利用者や多言語コミュニティの運営、越境での決済・運用に対応。世界に向けた事業展開を支えます。</p>
         </div>
       </div>
     </div>
@@ -137,7 +171,7 @@
 
   <section id="about">
     <div class="container">
-      <div class="sec-label">Company Profile</div>
+      <div class="sec-label">Company</div>
       <h2>会社概要</h2>
       <table class="profile">
         <tr><th>商号</th><td>シンクバリュー株式会社（Syncvalue Inc.）</td></tr>
@@ -145,8 +179,8 @@
         <tr><th>資本金</th><td>100万円</td></tr>
         <tr><th>代表者</th><td>代表取締役　繆 逸峰</td></tr>
         <tr><th>所在地</th><td>〒331-0078　埼玉県さいたま市西区西大宮二丁目26番地6</td></tr>
-        <tr><th>事業内容</th><td>不動産の賃貸・管理業<br>オンラインコミュニティ・サブスクリプション事業の運営および技術支援<br>各種コンサルティング業務　ほか</td></tr>
-        <tr><th>公告方法</th><td>官報に掲載して行う</td></tr>
+        <tr><th>事業内容</th><td>会員制コミュニティ・サブスクリプション事業の運営および構築支援<br>不動産の賃貸・管理業<br>各種コンサルティング業務　ほか</td></tr>
+        <tr><th>メール</th><td><a id="mail" href="#">［メールアドレスを表示］</a></td></tr>
       </table>
     </div>
   </section>
@@ -155,19 +189,30 @@
     <div class="container">
       <div class="sec-label">Contact</div>
       <h2>お問い合わせ</h2>
-      <div class="contact-grid">
-        <div class="contact-row">
-          <span class="k">メール</span>
-          <span class="v"><a id="mail" href="#">［メールアドレスを表示］</a></span>
+      <p class="lead">サービスに関するご相談・お問い合わせは、以下のフォームよりお気軽にどうぞ。</p>
+      <form class="contact" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div>
+          <label for="name">お名前</label>
+          <input type="text" id="name" name="name" required>
         </div>
-      </div>
+        <div>
+          <label for="email">メールアドレス</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="message">お問い合わせ内容</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">送信する</button>
+        <p class="form-note">送信をもって <a href="privacy.html">プライバシーポリシー</a> に同意したものとみなします。</p>
+      </form>
     </div>
   </section>
 
   <footer>
     <div class="container footer-inner">
       <span class="fb">シンクバリュー株式会社</span>
-      <span>&copy; 2023 Syncvalue Inc. All rights reserved.</span>
+      <span><a href="privacy.html">プライバシーポリシー</a>　&nbsp;　&copy; 2023 Syncvalue Inc.</span>
     </div>
   </footer>
 
