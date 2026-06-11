@@ -51,10 +51,10 @@
     .cta:hover { opacity: 0.88; }
     .note { font-size: 13.5px; color: var(--muted); }
     footer { background: var(--navy); color: #aeb8c8; padding: 40px 0; font-size: 13px; margin-top: 40px; }
-    .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; align-items: center; }
-    footer .fb { color: #fff; font-weight: 700; letter-spacing: 0.04em; }
     footer a { color: #aeb8c8; text-decoration: none; }
     footer a:hover { color: #fff; }
+    footer .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 22px; padding-bottom: 18px; margin-bottom: 18px; border-bottom: 1px solid rgba(255,255,255,.12); }
+    footer .footer-copy { text-align: center; }
   </style>
 </head>
 <body>
@@ -98,11 +98,18 @@
     </div>
   </main>
 
+  <!-- FOOTER:corp-v1 START -->
   <footer>
-    <div class="container footer-inner">
-      <span class="fb">シンクバリュー株式会社</span>
-      <span><a href="https://lighthouse.sync-value.com/">Lighthouse Club</a>　&nbsp;　<a href="privacy.html">プライバシーポリシー</a>　&nbsp;　&copy; 2023 Syncvalue Inc.</span>
+    <div class="container">
+      <div class="footer-links">
+        <a href="business.html">事業紹介</a>
+        <a href="https://lighthouse.sync-value.com/" rel="noopener">Lighthouse Club</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+        <a href="index.html#contact">お問い合わせ</a>
+      </div>
+      <div class="footer-copy">&copy; 2023 Syncvalue Inc.　シンクバリュー株式会社</div>
     </div>
   </footer>
+  <!-- FOOTER:corp-v1 END -->
 </body>
 </html>

@@ -63,6 +63,10 @@
     .card .ic { font-size: 24px; margin-bottom: 14px; display: block; }
     .card h3 { font-size: 17px; color: var(--navy); margin-bottom: 10px; }
     .card p { color: #3f4654; font-size: 14.5px; }
+    .card .more { display: block; margin-top: 14px; font-size: 14px; font-weight: 600; text-decoration: none; color: var(--navy-soft); }
+    .card .more:hover { color: var(--accent); }
+    footer .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 22px; padding-bottom: 18px; margin-bottom: 18px; border-bottom: 1px solid rgba(255,255,255,.12); }
+    footer .footer-copy { text-align: center; }
 
     table.profile { width: 100%; border-collapse: collapse; max-width: 720px; }
     table.profile th, table.profile td { text-align: left; padding: 16px 8px; border-bottom: 1px solid var(--line); vertical-align: top; font-size: 15px; }
@@ -134,7 +138,8 @@
         <div class="card">
           <span class="ic">🔄</span>
           <h3>サブスクリプション運営</h3>
-          <p>有料会員サービスの企画・運営。継続課金、会員管理、複数の配信・決済プラットフォーム連携に対応し、クリエイターや事業者が「コンテンツに集中できる」環境を整えます。運営コミュニティ：<a href="https://lighthouse.sync-value.com/" rel="noopener">Lighthouse Club</a>（<a href="business.html">事業紹介</a>）</p>
+          <p>有料会員サービスの企画・運営。継続課金、会員管理、複数の配信・決済プラットフォーム連携に対応し、クリエイターや事業者が「コンテンツに集中できる」環境を整えます。</p>
+          <a class="more" href="https://lighthouse.sync-value.com/" rel="noopener">運営コミュニティ：Lighthouse Club →</a>
         </div>
         <div class="card">
           <span class="ic">🏠</span>
@@ -208,11 +213,18 @@
     </div>
   </section>
 
+  <!-- FOOTER:corp-v1 START -->
   <footer>
-    <div class="container footer-inner">
-      <span class="fb">シンクバリュー株式会社</span>
-      <span><a href="business.html">事業紹介</a>　&nbsp;　<a href="https://lighthouse.sync-value.com/">Lighthouse Club</a>　&nbsp;　<a href="privacy.html">プライバシーポリシー</a>　&nbsp;　&copy; 2023 Syncvalue Inc.</span>
+    <div class="container">
+      <div class="footer-links">
+        <a href="business.html">事業紹介</a>
+        <a href="https://lighthouse.sync-value.com/" rel="noopener">Lighthouse Club</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+        <a href="index.html#contact">お問い合わせ</a>
+      </div>
+      <div class="footer-copy">&copy; 2023 Syncvalue Inc.　シンクバリュー株式会社</div>
     </div>
   </footer>
+  <!-- FOOTER:corp-v1 END -->
 </body>
 </html>
